@@ -24,6 +24,16 @@ final class GamblesTableViewController: UIViewController {
   fileprivate var globalGambles: [Gamble] = []
 }
 
+// MARK: - Life Cycle Methods
+extension GamblesTableViewController {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    localGambles.append(contentsOf: Gamble.localTestGambles)
+    globalGambles.append(contentsOf: Gamble.globalTestGambles)
+  }
+}
+
 // MARK: - UITableViewDataSource
 extension GamblesTableViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

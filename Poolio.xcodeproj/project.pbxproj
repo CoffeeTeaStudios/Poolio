@@ -15,9 +15,11 @@
 		604DB6A71D96478D00337DEC /* Gamble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6A61D96478D00337DEC /* Gamble.swift */; };
 		604DB6A91D9647AB00337DEC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6A81D9647AB00337DEC /* User.swift */; };
 		604DB6AB1D9647BB00337DEC /* Pool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6AA1D9647BB00337DEC /* Pool.swift */; };
-		604DB6AF1D96F3B600337DEC /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6AE1D96F3B600337DEC /* DiscoverCell.swift */; };
+		604DB6AF1D96F3B600337DEC /* PoolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6AE1D96F3B600337DEC /* PoolCell.swift */; };
 		604DB6B11D96FAB400337DEC /* GamblesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6B01D96FAB400337DEC /* GamblesTableViewController.swift */; };
 		604DB6B31D96FC8200337DEC /* GambleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6B21D96FC8200337DEC /* GambleCell.swift */; };
+		6070A9781D9700BE0079B76A /* Gamble+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6070A9771D9700BE0079B76A /* Gamble+Tests.swift */; };
+		6070A97A1D9703680079B76A /* PoolsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6070A9791D9703680079B76A /* PoolsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +33,11 @@
 		604DB6A61D96478D00337DEC /* Gamble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gamble.swift; sourceTree = "<group>"; };
 		604DB6A81D9647AB00337DEC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		604DB6AA1D9647BB00337DEC /* Pool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pool.swift; sourceTree = "<group>"; };
-		604DB6AE1D96F3B600337DEC /* DiscoverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
+		604DB6AE1D96F3B600337DEC /* PoolCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoolCell.swift; sourceTree = "<group>"; };
 		604DB6B01D96FAB400337DEC /* GamblesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamblesTableViewController.swift; sourceTree = "<group>"; };
 		604DB6B21D96FC8200337DEC /* GambleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GambleCell.swift; sourceTree = "<group>"; };
+		6070A9771D9700BE0079B76A /* Gamble+Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Gamble+Tests.swift"; sourceTree = "<group>"; };
+		6070A9791D9703680079B76A /* PoolsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoolsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				604DB68E1D96445D00337DEC /* AppDelegate.swift */,
+				6070A9761D9700B20079B76A /* Test Code */,
 				604DB6A31D9646FD00337DEC /* Controllers */,
 				604DB6A21D9646F600337DEC /* Models */,
 				604DB6A11D9646F200337DEC /* Views */,
@@ -89,7 +94,7 @@
 		604DB6A11D9646F200337DEC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				604DB6AE1D96F3B600337DEC /* DiscoverCell.swift */,
+				604DB6AE1D96F3B600337DEC /* PoolCell.swift */,
 				604DB6B21D96FC8200337DEC /* GambleCell.swift */,
 			);
 			name = Views;
@@ -110,8 +115,17 @@
 			isa = PBXGroup;
 			children = (
 				604DB6B01D96FAB400337DEC /* GamblesTableViewController.swift */,
+				6070A9791D9703680079B76A /* PoolsTableViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6070A9761D9700B20079B76A /* Test Code */ = {
+			isa = PBXGroup;
+			children = (
+				6070A9771D9700BE0079B76A /* Gamble+Tests.swift */,
+			);
+			name = "Test Code";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,11 +202,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				604DB6B11D96FAB400337DEC /* GamblesTableViewController.swift in Sources */,
+				6070A9781D9700BE0079B76A /* Gamble+Tests.swift in Sources */,
 				604DB6A91D9647AB00337DEC /* User.swift in Sources */,
+				6070A97A1D9703680079B76A /* PoolsTableViewController.swift in Sources */,
 				604DB68F1D96445D00337DEC /* AppDelegate.swift in Sources */,
 				604DB6B31D96FC8200337DEC /* GambleCell.swift in Sources */,
 				604DB6A71D96478D00337DEC /* Gamble.swift in Sources */,
-				604DB6AF1D96F3B600337DEC /* DiscoverCell.swift in Sources */,
+				604DB6AF1D96F3B600337DEC /* PoolCell.swift in Sources */,
 				604DB6A51D96475D00337DEC /* Token.swift in Sources */,
 				604DB6AB1D9647BB00337DEC /* Pool.swift in Sources */,
 			);

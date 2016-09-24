@@ -18,12 +18,11 @@ final class GambleCell: UITableViewCell {
   static let reuseIdentifier = "\(GambleCell.self)"
 
   @IBOutlet private var nameLabel: UILabel!
-  @IBOutlet private var currentTokensLabel: UILabel!
-  @IBOutlet private var maximumTokensLabel: UILabel!
+  @IBOutlet private var tokensLabel: UILabel!
+
   
   var gamble: GamblePresentable! { didSet {
     nameLabel.text = gamble.name
-    currentTokensLabel.text = "\(gamble.currentTokens)"
-    maximumTokensLabel.text = "\(gamble.maximumTokens)"
+    tokensLabel.text = "\(gamble.currentTokens) / \(gamble.maximumTokens)"
   }}
 }

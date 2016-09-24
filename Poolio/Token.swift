@@ -8,6 +8,6 @@
 
 import Foundation
 
-final class Token {
-  let uuid = UUID()
+struct Token {
+  let user: User
 }

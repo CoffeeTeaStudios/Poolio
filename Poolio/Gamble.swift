@@ -7,5 +7,10 @@
 //
 
 final class Gamble {
+  private(set) var name: String
   private(set) var pools: [Pool] = []
+  
+  init(name: String) {
+    self.name = name
+  }
 }
