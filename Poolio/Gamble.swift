@@ -8,9 +8,19 @@
 
 final class Gamble {
   private(set) var name: String
-  private(set) var pools: [Pool] = []
+  var pools: [Pool] = []
+  let maximumTokens: Int
   
-  init(name: String) {
+  init(name: String, maximumTokens: Int) {
     self.name = name
+    self.maximumTokens = maximumTokens
   }
+}
+
+// MARK: - GamblePresentable
+extension Gamble: GamblePresentable {
+  var currentTokens: Int {
+    return pools.reduce(0) { $0 + $1.tokens.count }
+  }
+  
 }

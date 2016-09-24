@@ -43,14 +43,17 @@ extension GamblesTableViewController: UITableViewDataSource {
       if localGambles.isEmpty {
         return tableView.dequeueReusableCell(withIdentifier: "NoGamblesCell")!
       }
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: GambleCell.reuseIdentifier) as? GambleCell else { fatalError() }
+      cell.gamble = localGambles[indexPath.row]
+      return cell
     case .globalGambles:
       if globalGambles.isEmpty {
         return tableView.dequeueReusableCell(withIdentifier: "NoGamblesCell")!
       }
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: GambleCell.reuseIdentifier) as? GambleCell else { fatalError() }
+      cell.gamble = globalGambles[indexPath.row]
+      return cell
     }
-    
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: GambleCell.reuseIdentifier) as? GambleCell else { fatalError() }
-    return cell
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,5 +84,40 @@ extension GamblesTableViewController: UITableViewDataSource {
   
   func numberOfSections(in tableView: UITableView) -> Int {
     return Section.allValues.count
+  }
+}
+
+// MARK: - UITableViewDelegate
+extension GamblesTableViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    guard let section = Section(rawValue: indexPath.section) else { fatalError() }
+    switch section {
+    case .localGambles:
+      guard !localGambles.isEmpty else { return }
+      performSegueWithIdentifier(segueIdentifier: .pools, sender: localGambles[indexPath.row])
+    case .globalGambles:
+      guard !globalGambles.isEmpty else { return }
+      performSegueWithIdentifier(segueIdentifier: .pools, sender: globalGambles[indexPath.row])
+    }
+    
+    defer {
+      tableView.deselectRow(at: indexPath, animated: true)
+    }
+  }
+}
+
+
+// MARK: - SegueHandlerType
+extension GamblesTableViewController: SegueHandlerType {
+  enum SegueIdentifier: String {
+    case pools
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    switch segueIdentifierForSegue(segue: segue) {
+    case .pools:
+      guard let poolsVC = segue.destination as? PoolsTableViewController else { fatalError() }
+      poolsVC.gamble = sender as! Gamble
+    }
   }
 }

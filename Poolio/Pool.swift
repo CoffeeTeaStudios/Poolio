@@ -12,7 +12,7 @@ final class Pool {
   }
   
   private(set) var name: String
-  private(set) var tokens: [Token]
+  var tokens: [Token]
   private(set) var privacy: Privacy
   
   init(name: String, tokens: [Token], privacy: Privacy) {
@@ -25,6 +25,13 @@ final class Pool {
 // MARK: - PoolDisplayable
 extension Pool: PoolDisplayable {
   var memberCount: Int {
-    return 5
+    var uniqueTokens: [Token] = []
+    for token in tokens {
+      if !uniqueTokens.contains(token) {
+        uniqueTokens.append(token)
+      }
+    }
+    
+    return uniqueTokens.count
   }
 }

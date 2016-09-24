@@ -108,7 +108,7 @@
         <!--Discover-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="DiscoverViewController" customModule="Poolio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="PoolsTableViewController" customModule="Poolio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -125,11 +125,11 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DiscoverCell" id="3nz-93-TYS" customClass="DiscoverCell" customModule="Poolio" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PoolCell" id="3nz-93-TYS" customClass="PoolCell" customModule="Poolio" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3nz-93-TYS" id="NUu-0B-NCV">
-                                            <frame key="frameInset" width="342" height="87.5"/>
+                                            <frame key="frameInset" width="342" height="87"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Nvt-Wd-iGg">
@@ -162,7 +162,7 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="leadingMargin" secondItem="302-6I-FPJ" secondAttribute="leading" id="1aw-se-gHH"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="302-6I-FPJ" secondAttribute="leading" constant="-8" id="1aw-se-gHH"/>
                                                 <constraint firstItem="Nvt-Wd-iGg" firstAttribute="centerY" secondItem="NUu-0B-NCV" secondAttribute="centerY" id="KWe-ba-SJb"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Nvt-Wd-iGg" secondAttribute="trailing" id="Xbp-z4-RWc"/>
                                                 <constraint firstItem="302-6I-FPJ" firstAttribute="centerY" secondItem="NUu-0B-NCV" secondAttribute="centerY" id="qZE-xu-UnB"/>

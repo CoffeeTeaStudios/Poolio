@@ -8,15 +8,17 @@
 
 extension Gamble {
   static var localTestGambles: [Gamble] {
+    let ferrariGamble = Gamble(name: "Ferrari Car", maximumTokens: 400)
+    ferrariGamble.pools = Pool.samplePools1
     return [
-      Gamble(name: "Ferrari Car"),
-      Gamble(name: "Versace Belt")
+      ferrariGamble,
+      Gamble(name: "Versace Belt", maximumTokens: 300)
     ]
   }
   
   static var globalTestGambles: [Gamble] {
     return [
-      Gamble(name: "Global Pot")
+      Gamble(name: "Global Pot", maximumTokens: 200)
     ]
   }
 }

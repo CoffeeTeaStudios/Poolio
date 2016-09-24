@@ -25,6 +25,7 @@ extension PoolsTableViewController: UITableViewDataSource {
       return tableView.dequeueReusableCell(withIdentifier: "NoPoolsCell")!
     }
     guard let cell = tableView.dequeueReusableCell(withIdentifier: PoolCell.reuseIdentifier) as? PoolCell else { fatalError() }
+    cell.pool = gamble.pools[indexPath.row]
     return cell
   }
 }
