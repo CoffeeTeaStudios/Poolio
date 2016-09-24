@@ -8,7 +8,7 @@
 
 final class Pool {
   enum Privacy: String {
-    case open = "Open", closed = "Closed"
+    case open = "Open", `private` = "Private"
   }
   
   private(set) var name: String

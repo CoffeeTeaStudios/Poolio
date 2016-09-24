@@ -29,7 +29,7 @@ extension GamblesTableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    localGambles.append(contentsOf: Gamble.localTestGambles)
+//    localGambles.append(contentsOf: Gamble.localTestGambles)
     globalGambles.append(contentsOf: Gamble.globalTestGambles)
   }
 }
@@ -94,10 +94,10 @@ extension GamblesTableViewController: UITableViewDelegate {
     switch section {
     case .localGambles:
       guard !localGambles.isEmpty else { return }
-      performSegueWithIdentifier(segueIdentifier: .pools, sender: localGambles[indexPath.row])
+      performSegueWithIdentifier(segueIdentifier: .gamble, sender: localGambles[indexPath.row])
     case .globalGambles:
       guard !globalGambles.isEmpty else { return }
-      performSegueWithIdentifier(segueIdentifier: .pools, sender: globalGambles[indexPath.row])
+      performSegueWithIdentifier(segueIdentifier: .gamble, sender: globalGambles[indexPath.row])
     }
     
     defer {
@@ -110,14 +110,14 @@ extension GamblesTableViewController: UITableViewDelegate {
 // MARK: - SegueHandlerType
 extension GamblesTableViewController: SegueHandlerType {
   enum SegueIdentifier: String {
-    case pools
+    case gamble
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     switch segueIdentifierForSegue(segue: segue) {
-    case .pools:
-      guard let poolsVC = segue.destination as? PoolsTableViewController else { fatalError() }
-      poolsVC.gamble = sender as! Gamble
+    case .gamble:
+      guard let detailsVC = segue.destination as? GambleDetailsViewController else { fatalError() }
+      detailsVC.gamble = sender as! Gamble
     }
   }
 }

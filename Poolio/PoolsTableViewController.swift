@@ -17,6 +17,9 @@ final class PoolsTableViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension PoolsTableViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    if gamble.pools.isEmpty {
+      return 1
+    }
     return gamble.pools.count
   }
   
@@ -27,5 +30,12 @@ extension PoolsTableViewController: UITableViewDataSource {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: PoolCell.reuseIdentifier) as? PoolCell else { fatalError() }
     cell.pool = gamble.pools[indexPath.row]
     return cell
+  }
+}
+
+// MARK: - UITableViewDelegate
+extension PoolsTableViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
   }
 }

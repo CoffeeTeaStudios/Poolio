@@ -17,8 +17,10 @@ extension Gamble {
   }
   
   static var globalTestGambles: [Gamble] {
+    let globalPot = Gamble(name: "Global Pot", maximumTokens: 100)
+    globalPot.pools = Pool.samplePools1
     return [
-      Gamble(name: "Global Pot", maximumTokens: 200)
+      globalPot
     ]
   }
 }

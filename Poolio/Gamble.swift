@@ -22,5 +22,4 @@ extension Gamble: GamblePresentable {
   var currentTokens: Int {
     return pools.reduce(0) { $0 + $1.tokens.count }
   }
-  
 }

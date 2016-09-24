@@ -24,7 +24,7 @@ final class PoolCell: UITableViewCell {
   
   var pool: PoolDisplayable! { didSet {
     teamLabel.text = pool.name
-    memberCountLabel.text = "\(pool.memberCount)"
+    memberCountLabel.text = "\(pool.memberCount) members"
     poolPrivacyLabel.text = pool.privacy.rawValue
   }}
 }
