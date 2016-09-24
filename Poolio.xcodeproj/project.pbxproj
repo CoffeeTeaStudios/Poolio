@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		604DB68F1D96445D00337DEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB68E1D96445D00337DEC /* AppDelegate.swift */; };
-		604DB6911D96445D00337DEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6901D96445D00337DEC /* ViewController.swift */; };
 		604DB6941D96445D00337DEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604DB6921D96445D00337DEC /* Main.storyboard */; };
 		604DB6961D96445D00337DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 604DB6951D96445D00337DEC /* Assets.xcassets */; };
 		604DB6991D96445D00337DEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604DB6971D96445D00337DEC /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		604DB68B1D96445D00337DEC /* Poolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		604DB68E1D96445D00337DEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		604DB6901D96445D00337DEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		604DB6931D96445D00337DEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		604DB6951D96445D00337DEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		604DB6981D96445D00337DEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,13 +53,44 @@
 			isa = PBXGroup;
 			children = (
 				604DB68E1D96445D00337DEC /* AppDelegate.swift */,
-				604DB6901D96445D00337DEC /* ViewController.swift */,
-				604DB6921D96445D00337DEC /* Main.storyboard */,
+				604DB6A31D9646FD00337DEC /* Controllers */,
+				604DB6A21D9646F600337DEC /* Models */,
+				604DB6A11D9646F200337DEC /* Views */,
+				604DB6A01D9646EC00337DEC /* Storyboards & Nibs */,
 				604DB6951D96445D00337DEC /* Assets.xcassets */,
-				604DB6971D96445D00337DEC /* LaunchScreen.storyboard */,
 				604DB69A1D96445D00337DEC /* Info.plist */,
 			);
 			path = Poolio;
+			sourceTree = "<group>";
+		};
+		604DB6A01D9646EC00337DEC /* Storyboards & Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				604DB6921D96445D00337DEC /* Main.storyboard */,
+				604DB6971D96445D00337DEC /* LaunchScreen.storyboard */,
+			);
+			name = "Storyboards & Nibs";
+			sourceTree = "<group>";
+		};
+		604DB6A11D9646F200337DEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		604DB6A21D9646F600337DEC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		604DB6A31D9646FD00337DEC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +166,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				604DB6911D96445D00337DEC /* ViewController.swift in Sources */,
 				604DB68F1D96445D00337DEC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
