@@ -15,8 +15,9 @@
 		604DB6A71D96478D00337DEC /* Gamble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6A61D96478D00337DEC /* Gamble.swift */; };
 		604DB6A91D9647AB00337DEC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6A81D9647AB00337DEC /* User.swift */; };
 		604DB6AB1D9647BB00337DEC /* Pool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6AA1D9647BB00337DEC /* Pool.swift */; };
-		604DB6AD1D96F33700337DEC /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6AC1D96F33700337DEC /* DiscoverViewController.swift */; };
 		604DB6AF1D96F3B600337DEC /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6AE1D96F3B600337DEC /* DiscoverCell.swift */; };
+		604DB6B11D96FAB400337DEC /* GamblesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6B01D96FAB400337DEC /* GamblesTableViewController.swift */; };
+		604DB6B31D96FC8200337DEC /* GambleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6B21D96FC8200337DEC /* GambleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +31,9 @@
 		604DB6A61D96478D00337DEC /* Gamble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gamble.swift; sourceTree = "<group>"; };
 		604DB6A81D9647AB00337DEC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		604DB6AA1D9647BB00337DEC /* Pool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pool.swift; sourceTree = "<group>"; };
-		604DB6AC1D96F33700337DEC /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		604DB6AE1D96F3B600337DEC /* DiscoverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
+		604DB6B01D96FAB400337DEC /* GamblesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamblesTableViewController.swift; sourceTree = "<group>"; };
+		604DB6B21D96FC8200337DEC /* GambleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GambleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				604DB6AE1D96F3B600337DEC /* DiscoverCell.swift */,
+				604DB6B21D96FC8200337DEC /* GambleCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -106,7 +109,7 @@
 		604DB6A31D9646FD00337DEC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				604DB6AC1D96F33700337DEC /* DiscoverViewController.swift */,
+				604DB6B01D96FAB400337DEC /* GamblesTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -184,10 +187,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				604DB6B11D96FAB400337DEC /* GamblesTableViewController.swift in Sources */,
 				604DB6A91D9647AB00337DEC /* User.swift in Sources */,
 				604DB68F1D96445D00337DEC /* AppDelegate.swift in Sources */,
+				604DB6B31D96FC8200337DEC /* GambleCell.swift in Sources */,
 				604DB6A71D96478D00337DEC /* Gamble.swift in Sources */,
-				604DB6AD1D96F33700337DEC /* DiscoverViewController.swift in Sources */,
 				604DB6AF1D96F3B600337DEC /* DiscoverCell.swift in Sources */,
 				604DB6A51D96475D00337DEC /* Token.swift in Sources */,
 				604DB6AB1D9647BB00337DEC /* Pool.swift in Sources */,
@@ -354,6 +358,7 @@
 				604DB69F1D96445D00337DEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
