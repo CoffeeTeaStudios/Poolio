@@ -11,6 +11,12 @@
 		604DB6941D96445D00337DEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604DB6921D96445D00337DEC /* Main.storyboard */; };
 		604DB6961D96445D00337DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 604DB6951D96445D00337DEC /* Assets.xcassets */; };
 		604DB6991D96445D00337DEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604DB6971D96445D00337DEC /* LaunchScreen.storyboard */; };
+		604DB6A51D96475D00337DEC /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6A41D96475D00337DEC /* Token.swift */; };
+		604DB6A71D96478D00337DEC /* Gamble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6A61D96478D00337DEC /* Gamble.swift */; };
+		604DB6A91D9647AB00337DEC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6A81D9647AB00337DEC /* User.swift */; };
+		604DB6AB1D9647BB00337DEC /* Pool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6AA1D9647BB00337DEC /* Pool.swift */; };
+		604DB6AD1D96F33700337DEC /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6AC1D96F33700337DEC /* DiscoverViewController.swift */; };
+		604DB6AF1D96F3B600337DEC /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6AE1D96F3B600337DEC /* DiscoverCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,12 @@
 		604DB6951D96445D00337DEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		604DB6981D96445D00337DEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		604DB69A1D96445D00337DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		604DB6A41D96475D00337DEC /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		604DB6A61D96478D00337DEC /* Gamble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gamble.swift; sourceTree = "<group>"; };
+		604DB6A81D9647AB00337DEC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		604DB6AA1D9647BB00337DEC /* Pool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pool.swift; sourceTree = "<group>"; };
+		604DB6AC1D96F33700337DEC /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		604DB6AE1D96F3B600337DEC /* DiscoverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +87,7 @@
 		604DB6A11D9646F200337DEC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				604DB6AE1D96F3B600337DEC /* DiscoverCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -82,6 +95,10 @@
 		604DB6A21D9646F600337DEC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				604DB6A41D96475D00337DEC /* Token.swift */,
+				604DB6A61D96478D00337DEC /* Gamble.swift */,
+				604DB6A81D9647AB00337DEC /* User.swift */,
+				604DB6AA1D9647BB00337DEC /* Pool.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -89,6 +106,7 @@
 		604DB6A31D9646FD00337DEC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				604DB6AC1D96F33700337DEC /* DiscoverViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -166,7 +184,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				604DB6A91D9647AB00337DEC /* User.swift in Sources */,
 				604DB68F1D96445D00337DEC /* AppDelegate.swift in Sources */,
+				604DB6A71D96478D00337DEC /* Gamble.swift in Sources */,
+				604DB6AD1D96F33700337DEC /* DiscoverViewController.swift in Sources */,
+				604DB6AF1D96F3B600337DEC /* DiscoverCell.swift in Sources */,
+				604DB6A51D96475D00337DEC /* Token.swift in Sources */,
+				604DB6AB1D9647BB00337DEC /* Pool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

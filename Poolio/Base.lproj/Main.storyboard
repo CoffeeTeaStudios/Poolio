@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Discover-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Poolio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="DiscoverViewController" customModule="Poolio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,13 +18,84 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yWi-34-WTL">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DiscoverCell" id="3nz-93-TYS" customClass="DiscoverCell" customModule="Poolio" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="88"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3nz-93-TYS" id="NUu-0B-NCV">
+                                            <frame key="frameInset" width="342" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Nvt-Wd-iGg">
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTI-58-Z3F">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5m-Ix-Ff8">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="302-6I-FPJ">
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Team 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmG-Vz-7h5">
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 / 15 members" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWH-nr-oyp">
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="leadingMargin" secondItem="302-6I-FPJ" secondAttribute="leading" id="1aw-se-gHH"/>
+                                                <constraint firstItem="Nvt-Wd-iGg" firstAttribute="centerY" secondItem="NUu-0B-NCV" secondAttribute="centerY" id="KWe-ba-SJb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Nvt-Wd-iGg" secondAttribute="trailing" id="Xbp-z4-RWc"/>
+                                                <constraint firstItem="302-6I-FPJ" firstAttribute="centerY" secondItem="NUu-0B-NCV" secondAttribute="centerY" id="qZE-xu-UnB"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="302-6I-FPJ" secondAttribute="bottom" constant="8.5" id="v8q-cE-ceC"/>
+                                                <constraint firstItem="302-6I-FPJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NUu-0B-NCV" secondAttribute="topMargin" constant="9" id="zlf-Fg-0Vx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="memberCountLabel" destination="VWH-nr-oyp" id="xbp-BJ-X6n"/>
+                                            <outlet property="poolPrivacyLabel" destination="PTI-58-Z3F" id="NwY-kt-5vI"/>
+                                            <outlet property="teamLabel" destination="KmG-Vz-7h5" id="OTX-GI-61z"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jCV-os-PTy"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="aVX-Ll-RkB"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yWi-34-WTL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Dbz-9z-KbE"/>
+                            <constraint firstItem="yWi-34-WTL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HAG-A3-80N"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yWi-34-WTL" secondAttribute="bottom" id="Nce-M5-IUc"/>
+                            <constraint firstAttribute="trailing" secondItem="yWi-34-WTL" secondAttribute="trailing" id="ozk-BC-eWO"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="uN7-d8-qo5"/>
+                    <navigationItem key="navigationItem" title="Discover" id="uN7-d8-qo5"/>
+                    <connections>
+                        <outlet property="tableView" destination="yWi-34-WTL" id="CpC-nn-IY6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="798" y="691"/>
+            <point key="canvasLocation" x="797.60000000000002" y="690.40479760119945"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KTd-NM-kDI">
