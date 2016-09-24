@@ -19,7 +19,7 @@ extension GambleDetailsViewController: SegueHandlerType {
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    switch segueIdentifierForSegue(segue: segue) {
+    switch segueIdentifierFor(segue: segue) {
     case .pools:
       guard let poolsVC = segue.destination as? PoolsTableViewController else { fatalError() }
       poolsVC.gamble = gamble

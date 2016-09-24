@@ -94,10 +94,10 @@ extension GamblesTableViewController: UITableViewDelegate {
     switch section {
     case .localGambles:
       guard !localGambles.isEmpty else { return }
-      performSegueWithIdentifier(segueIdentifier: .gamble, sender: localGambles[indexPath.row])
+      performSegue(withIdentifier: .gamble, sender: localGambles[indexPath.row])
     case .globalGambles:
       guard !globalGambles.isEmpty else { return }
-      performSegueWithIdentifier(segueIdentifier: .gamble, sender: globalGambles[indexPath.row])
+      performSegue(withIdentifier: .gamble, sender: globalGambles[indexPath.row])
     }
     
     defer {
@@ -114,7 +114,7 @@ extension GamblesTableViewController: SegueHandlerType {
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    switch segueIdentifierForSegue(segue: segue) {
+    switch segueIdentifierFor(segue: segue) {
     case .gamble:
       guard let detailsVC = segue.destination as? GambleDetailsViewController else { fatalError() }
       detailsVC.gamble = sender as! Gamble
