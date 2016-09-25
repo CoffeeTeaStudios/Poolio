@@ -9,9 +9,25 @@
 import Foundation
 
 struct Token {
+  let uniqueIdentifier: UUID
   let user: User
 }
 
+extension Token {
+  init(user: User, uniqueIdentifier: UUID = UUID()) {
+    self.user = user
+    self.uniqueIdentifier = uniqueIdentifier
+  }
+}
+
+extension Token: JSONConvertible {
+  var json: [String: Any] {
+    return [
+      "uniqueIdentifier": uniqueIdentifier.uuidString,
+      "userIdentifier": user.uniqueIdentifier.uuidString
+    ]
+  }
+}
 extension Token: Equatable {}
 
 func ==(lhs: Token, rhs: Token) -> Bool {

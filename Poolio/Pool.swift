@@ -6,6 +6,8 @@
 //  Copyright © 2016 Kelvin. All rights reserved.
 //
 
+import Foundation
+
 final class Pool {
   enum Privacy: String {
     case open = "Open", `private` = "Private"
@@ -14,11 +16,13 @@ final class Pool {
   private(set) var name: String
   var tokens: [Token]
   private(set) var privacy: Privacy
+  let uniqueIdentifier: UUID
   
-  init(name: String, tokens: [Token], privacy: Privacy) {
+  init(name: String, tokens: [Token], privacy: Privacy, uniqueIdentifier: UUID = UUID()) {
     self.name = name
     self.tokens = tokens
     self.privacy = privacy
+    self.uniqueIdentifier = uniqueIdentifier
   }
 }
 
@@ -33,5 +37,17 @@ extension Pool: PoolDisplayable {
     }
     
     return uniqueTokens.count
+  }
+}
+
+// MARK: - JSONConvertible
+extension Pool: JSONConvertible {
+  var json: [String: Any] {
+    return [
+      "name": name,
+      "tokens": tokens.map { $0.uniqueIdentifier.uuidString },
+      "privacy": privacy.rawValue,
+      "uniqueIdentifier": uniqueIdentifier.uuidString
+    ]
   }
 }
