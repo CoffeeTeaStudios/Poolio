@@ -207,7 +207,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eee-d1-TmQ">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="aFd-Rv-The">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PoolCell" id="aFd-Rv-The" customClass="PoolCell" customModule="Poolio" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aFd-Rv-The" id="3ye-T3-cgC">
@@ -255,6 +255,11 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="TgL-IL-VOZ" secondAttribute="trailing" id="lmX-C6-ePC"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="tT4-Dr-KkI" id="nsg-wq-oUp"/>
+                                            <outlet property="playerCountLabel" destination="5aU-U8-abo" id="mD3-qh-bzD"/>
+                                            <outlet property="poolImageView" destination="DcN-aZ-jIO" id="vis-De-ohb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
