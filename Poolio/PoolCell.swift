@@ -18,7 +18,7 @@ final class PoolCell: UITableViewCell {
   
   @IBOutlet private var nameLabel: UILabel!
   @IBOutlet private var playerCountLabel: UILabel!
-  @IBOutlet private var poolImageView: UIImageView! { didSet {
+  @IBOutlet var poolImageView: UIImageView! { didSet {
     poolImageView.image = UIImage.imageWith(color: #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1))
   }}
   

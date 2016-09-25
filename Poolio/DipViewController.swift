@@ -26,9 +26,9 @@ final class DipViewController: UIViewController {
   
   func updateUI() {
     print("updating UI")
-    maximumTokensLabel.text = "D \(gamble.maximumTokens + 300000)"
+    maximumTokensLabel.text = "D \(gamble.maximumTokens + 100)"
     
-    var tokens = 300000
+    var tokens = 0
     for pool in gamble.pools {
       tokens += pool.tokens.count
     }

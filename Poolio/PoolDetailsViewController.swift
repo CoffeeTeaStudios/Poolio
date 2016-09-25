@@ -9,13 +9,20 @@
 import UIKit
 
 final class PoolDetailsViewController: UIViewController {
-  @IBOutlet fileprivate var teamImageView: UIImageView! { didSet {
+  @IBOutlet var teamImageView: UIImageView! { didSet {
     teamImageView.image = UIImage.imageWith(color: .groupTableViewBackground)
   }}
   
   @IBOutlet fileprivate var chanceImageView: UIImageView! { didSet {
     chanceImageView.image = UIImage.imageWith(color: UIColor(red: 255/255, green: 79/255, blue: 76/255, alpha: 1))
   }}
+  
+  var teamImage: UIImage?
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    teamImageView.image = teamImage
+  }
 }
 
 // MARK: - Life Cycle Methods
