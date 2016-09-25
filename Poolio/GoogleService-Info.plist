@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>1047074437236-6qk3a3848k2fugfokvn6usae18vqs2n8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1047074437236-6qk3a3848k2fugfokvn6usae18vqs2n8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCoj7f2xZPImpsJ-gBE12aIGA1C1uY_ZKM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1047074437236</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Kelvin.Poolio</string>
+	<key>PROJECT_ID</key>
+	<string>vswdip</string>
+	<key>STORAGE_BUCKET</key>
+	<string>vswdip.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1047074437236:ios:41bc83a2bad563ed</string>
+	<key>DATABASE_URL</key>
+	<string>https://vswdip.firebaseio.com</string>
+</dict>
+</plist>
