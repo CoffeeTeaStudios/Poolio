@@ -9,7 +9,8 @@
 import UIKit
 
 final class DipViewController: UIViewController {
-  
+  @IBOutlet fileprivate var progressView: UIView!
+  @IBOutlet fileprivate var progressBarConstraint: NSLayoutConstraint!
 }
 
 // MARK: - Life Cycle Methods
@@ -24,12 +25,16 @@ extension DipViewController {
     self.navigationController?.isNavigationBarHidden = true
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    setProgressBar(toPercentage: 70)
+  }
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
     
     UIView.animate(withDuration: 1.0) { 
       self.navigationController?.isNavigationBarHidden = false
-
     }
   }
 }
@@ -44,6 +49,20 @@ extension DipViewController: SegueHandlerType {
     case .dipDetails:
       break
     }
+  }
+}
+
+// MARK: - Helper Methods
+fileprivate extension DipViewController {
+  func setProgressBar(toPercentage percent: CGFloat) {
+    let max = progressView.frame.height
+    
+    let newValue = percent * max / 100
+    progressBarConstraint.constant = max - newValue
+    
+    UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseInOut, animations: {
+      self.view.layoutIfNeeded()
+    }, completion: nil)
   }
 }
 

@@ -20,6 +20,7 @@ extension AppDelegate: UIApplicationDelegate {
     Theme.applyGlobalTint()
     Theme.changeNaviBarColor()
     Theme.changeTabBarColor()
+    Theme.changeNaviBarTextColor()
     return true
   }
 }

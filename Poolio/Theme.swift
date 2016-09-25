@@ -24,4 +24,8 @@ struct Theme {
     UITabBar.appearance().backgroundImage = UIImage.imageWith(color: Theme.color)
     UITabBar.appearance().clipsToBounds = true
   }
+  
+  static func changeNaviBarTextColor() {
+    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+  }
 }
