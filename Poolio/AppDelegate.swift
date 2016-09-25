@@ -15,5 +15,8 @@ final class AppDelegate: UIResponder {
 
 // MARK: - UIApplicationDelegate
 extension AppDelegate: UIApplicationDelegate {
-  
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+    FirebaseManager.sharedInstance.installPot()
+    return true
+  }
 }

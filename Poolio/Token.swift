@@ -9,7 +9,15 @@
 import Foundation
 
 struct Token {
+  let uniqueIdentifier: UUID
   let user: User
+}
+
+extension Token {
+  init(user: User, uniqueIdentifier: UUID = UUID()) {
+    self.user = user
+    self.uniqueIdentifier = uniqueIdentifier
+  }
 }
 
 extension Token: Equatable {}
