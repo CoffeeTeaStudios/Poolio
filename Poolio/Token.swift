@@ -20,13 +20,9 @@ extension Token {
   }
 }
 
-// MARK: - JSONConvertible
 extension Token: JSONConvertible {
   var json: [String: Any] {
-    return [
-      "uniqueIdentifier": uniqueIdentifier.uuidString,
-      "user": user.uniqueIdentifier.uuidString
-    ]
+    return [:]
   }
 }
 extension Token: Equatable {}

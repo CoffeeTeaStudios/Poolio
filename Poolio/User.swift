@@ -9,7 +9,7 @@
 import UIKit
 
 final class User {
-  let uniqueIdentifier: UUID
+  var uniqueIdentifier: UUID
   var firstName: String
   var lastName: String
   
@@ -22,6 +22,7 @@ final class User {
   }
 }
 
+
 // MARK: - JSONConvertible
 extension User: JSONConvertible {
   var json: [String: Any] {
@@ -29,7 +30,7 @@ extension User: JSONConvertible {
       "uniqueIdentifier": uniqueIdentifier.uuidString,
       "firstName": firstName,
       "lastName": lastName,
-      "tokens": tokens.map { $0.uniqueIdentifier.uuidString }
+      "tokens": tokens.map { $0.json }
     ]
   }
 }

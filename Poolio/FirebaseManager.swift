@@ -15,14 +15,23 @@ protocol JSONConvertible {
 final class FirebaseManager {
   static let sharedInstance = FirebaseManager()
   fileprivate let storageRef: FIRDatabaseReference!
+  fileprivate let gamblesRef: FIRDatabaseReference!
+  fileprivate let tokensRef: FIRDatabaseReference!
+  fileprivate let poolsRef: FIRDatabaseReference!
+  fileprivate let usersRef: FIRDatabaseReference!
   
   init() {
     FIRApp.configure()
     storageRef = FIRDatabase.database().reference()
+    gamblesRef = storageRef.child("gambles")
+    tokensRef = storageRef.child("tokens")
+    poolsRef = storageRef.child("pools")
+    usersRef = storageRef.child("users")
   }
 }
 
 extension FirebaseManager {
+  
   func installPot() {
     let gamble = Gamble(name: "Global Pot", maximumTokens: 100)
     
@@ -31,20 +40,21 @@ extension FirebaseManager {
     
     let tokens: [Token] = pools.map { $0.tokens }.flatMap { $0 }
     
-    storageRef.child("gambles").child(gamble.uniqueIdentifier.uuidString).setValue(gamble.json)
+    gamblesRef.child(gamble.uniqueIdentifier.uuidString).setValue(gamble.json)
     
     pools.forEach {
-      storageRef.child("pools").child($0.uniqueIdentifier.uuidString).setValue($0.json)
+      poolsRef.child($0.uniqueIdentifier.uuidString).setValue($0.json)
     }
     
     tokens.forEach {
-      storageRef.child("tokens").child($0.uniqueIdentifier.uuidString).setValue($0.json)
+      tokensRef.child($0.uniqueIdentifier.uuidString).setValue($0.json)
     }
     
     let users: [User] = tokens.map { $0.user }
     
     users.forEach {
-      storageRef.child("users").child($0.uniqueIdentifier.uuidString).setValue($0.json)
+      usersRef.child($0.uniqueIdentifier.uuidString).setValue($0.json)
     }
   }
+
 }

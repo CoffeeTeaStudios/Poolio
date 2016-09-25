@@ -32,8 +32,9 @@ extension Gamble: GamblePresentable {
 extension Gamble: JSONConvertible {
   var json: [String: Any] {
     return [
+      "uniqueIdentifier": uniqueIdentifier.uuidString,
       "name": name,
-      "pools": pools.map { $0.uniqueIdentifier.uuidString },
+      "pools": pools.map { $0.json },
       "maximumTokens": maximumTokens
     ]
   }
