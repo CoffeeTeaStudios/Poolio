@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="52" y="769.56521739130437"/>
         </scene>
-        <!--View Controller-->
+        <!--Dip Details View Controller-->
         <scene sceneID="Eki-aT-zyw">
             <objects>
-                <viewController id="WVv-BF-gpJ" sceneMemberID="viewController">
+                <viewController id="WVv-BF-gpJ" customClass="DipDetailsViewController" customModule="Poolio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Sh-eT-GQN"/>
                         <viewControllerLayoutGuide type="bottom" id="xhC-lT-Nqk"/>
@@ -54,7 +54,7 @@
                     <view key="view" contentMode="scaleToFill" id="qxk-6d-odO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.29803921570000003" green="0.3294117647" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGD-Kz-MNY" userLabel="First Responder" sceneMemberID="firstResponder"/>

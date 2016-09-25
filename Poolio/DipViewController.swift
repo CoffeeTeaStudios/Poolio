@@ -27,7 +27,10 @@ extension DipViewController {
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
     
-    self.navigationController?.isNavigationBarHidden = false
+    UIView.animate(withDuration: 1.0) { 
+      self.navigationController?.isNavigationBarHidden = false
+
+    }
   }
 }
 
