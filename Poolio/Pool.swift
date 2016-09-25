@@ -45,7 +45,7 @@ extension Pool: JSONConvertible {
   var json: [String: Any] {
     return [
       "name": name,
-      "tokens": tokens.map { $0.json },
+      "tokens": tokens.map { $0.uniqueIdentifier.uuidString },
       "privacy": privacy.rawValue,
       "uniqueIdentifier": uniqueIdentifier.uuidString
     ]

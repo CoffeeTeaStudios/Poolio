@@ -22,7 +22,10 @@ extension Token {
 
 extension Token: JSONConvertible {
   var json: [String: Any] {
-    return [:]
+    return [
+      "uniqueIdentifier": uniqueIdentifier.uuidString,
+      "userIdentifier": user.uniqueIdentifier.uuidString
+    ]
   }
 }
 extension Token: Equatable {}

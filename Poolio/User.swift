@@ -30,7 +30,7 @@ extension User: JSONConvertible {
       "uniqueIdentifier": uniqueIdentifier.uuidString,
       "firstName": firstName,
       "lastName": lastName,
-      "tokens": tokens.map { $0.json }
+      "tokens": tokens.map { $0.uniqueIdentifier.uuidString }
     ]
   }
 }

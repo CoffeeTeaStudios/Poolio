@@ -34,7 +34,7 @@ extension Gamble: JSONConvertible {
     return [
       "uniqueIdentifier": uniqueIdentifier.uuidString,
       "name": name,
-      "pools": pools.map { $0.json },
+      "pools": pools.map { $0.uniqueIdentifier.uuidString },
       "maximumTokens": maximumTokens
     ]
   }
