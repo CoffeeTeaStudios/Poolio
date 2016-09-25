@@ -3,4 +3,5 @@ target 'Poolio' do
 
   # Pods for Poolio
   pod 'Firebase'
+  pod 'Firebase/Database'
 end
