@@ -10,7 +10,11 @@ import UIKit
 
 final class GroupContributionViewController: UIViewController {
   @IBOutlet fileprivate var chanceImageView: UIImageView! { didSet {
-    chanceImageView.image = UIImage.imageWith(color: UIColor(red: 255/255, green: 209/255, blue: 76/255, alpha: 1))
+    chanceImageView.image = UIImage.imageWith(color: UIColor(red: 255/255, green: 79/255, blue: 76/255, alpha: 1))
+  }}
+  
+  @IBOutlet fileprivate var contributionTextField: UITextField! { didSet {
+    contributionTextField.becomeFirstResponder()
   }}
 }
 // MARK: - Life Cycle Methods
@@ -24,5 +28,16 @@ extension GroupContributionViewController {
     super.viewWillLayoutSubviews()
     
     chanceImageView.layer.cornerRadius = chanceImageView.frame.height / 2
+  }
+}
+
+// MARK: - @IBActions
+private extension GroupContributionViewController {
+  @IBAction func requestButtonTapped() {
+    _ = navigationController?.popToRootViewController(animated: true)
+  }
+  
+  @IBAction func cancelButtonTapped() {
+    _ = navigationController?.popViewController(animated: true)
   }
 }

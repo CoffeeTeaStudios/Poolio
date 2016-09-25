@@ -14,7 +14,7 @@ final class PoolDetailsViewController: UIViewController {
   }}
   
   @IBOutlet fileprivate var chanceImageView: UIImageView! { didSet {
-    chanceImageView.image = UIImage.imageWith(color: UIColor(red: 255/255, green: 209/255, blue: 76/255, alpha: 1))
+    chanceImageView.image = UIImage.imageWith(color: UIColor(red: 255/255, green: 79/255, blue: 76/255, alpha: 1))
   }}
 }
 

@@ -22,7 +22,8 @@ extension DipViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
-    self.navigationController?.isNavigationBarHidden = true
+    navigationController?.isNavigationBarHidden = true
+    tabBarController?.tabBar.isHidden = false
   }
   
   override func viewDidAppear(_ animated: Bool) {
