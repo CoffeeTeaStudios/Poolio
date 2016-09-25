@@ -10,6 +10,9 @@
 		251FE9827319C74473332084 /* Pods_Poolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD64477040533C0A481020E8 /* Pods_Poolio.framework */; };
 		602317AF1D97B94C001E05D8 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602317AE1D97B94C001E05D8 /* UIImage+Color.swift */; };
 		602317B11D97CC8A001E05D8 /* PoolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602317B01D97CC8A001E05D8 /* PoolCell.swift */; };
+		602317B31D97D410001E05D8 /* ContributeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602317B21D97D410001E05D8 /* ContributeViewController.swift */; };
+		602317B51D97DFC1001E05D8 /* PoolDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602317B41D97DFC1001E05D8 /* PoolDetailsViewController.swift */; };
+		602317B71D97E4D4001E05D8 /* GroupContributionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602317B61D97E4D4001E05D8 /* GroupContributionViewController.swift */; };
 		604DB68F1D96445D00337DEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB68E1D96445D00337DEC /* AppDelegate.swift */; };
 		604DB6941D96445D00337DEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604DB6921D96445D00337DEC /* Main.storyboard */; };
 		604DB6961D96445D00337DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 604DB6951D96445D00337DEC /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 		1D31CD1AA31D71B06E022377 /* Pods-Poolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Poolio/Pods-Poolio.release.xcconfig"; sourceTree = "<group>"; };
 		602317AE1D97B94C001E05D8 /* UIImage+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 		602317B01D97CC8A001E05D8 /* PoolCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoolCell.swift; sourceTree = "<group>"; };
+		602317B21D97D410001E05D8 /* ContributeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributeViewController.swift; sourceTree = "<group>"; };
+		602317B41D97DFC1001E05D8 /* PoolDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoolDetailsViewController.swift; sourceTree = "<group>"; };
+		602317B61D97E4D4001E05D8 /* GroupContributionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupContributionViewController.swift; sourceTree = "<group>"; };
 		604DB68B1D96445D00337DEC /* Poolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		604DB68E1D96445D00337DEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		604DB6931D96445D00337DEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +154,9 @@
 			children = (
 				60D36D671D97AEEC0099BFF1 /* DipViewController.swift */,
 				60D36D6B1D97B5490099BFF1 /* DipDetailsViewController.swift */,
+				602317B21D97D410001E05D8 /* ContributeViewController.swift */,
+				602317B41D97DFC1001E05D8 /* PoolDetailsViewController.swift */,
+				602317B61D97E4D4001E05D8 /* GroupContributionViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -318,11 +327,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6070A9871D9749990079B76A /* FirebaseManager.swift in Sources */,
+				602317B31D97D410001E05D8 /* ContributeViewController.swift in Sources */,
 				6070A9781D9700BE0079B76A /* Gamble+Tests.swift in Sources */,
 				604DB6A91D9647AB00337DEC /* User.swift in Sources */,
 				6070A9801D970CD00079B76A /* User+Tests.swift in Sources */,
 				6070A97E1D970C750079B76A /* Token+Tests.swift in Sources */,
+				602317B51D97DFC1001E05D8 /* PoolDetailsViewController.swift in Sources */,
 				6070A9831D9710180079B76A /* SegueHandlerType.swift in Sources */,
+				602317B71D97E4D4001E05D8 /* GroupContributionViewController.swift in Sources */,
 				604DB68F1D96445D00337DEC /* AppDelegate.swift in Sources */,
 				604DB6A71D96478D00337DEC /* Gamble.swift in Sources */,
 				60D36D681D97AEEC0099BFF1 /* DipViewController.swift in Sources */,
@@ -385,6 +397,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -435,6 +448,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
