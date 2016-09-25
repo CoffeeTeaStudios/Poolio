@@ -51,10 +51,9 @@ extension FirebaseManager {
     }
     
     let users: [User] = tokens.map { $0.user }
-    
+
     users.forEach {
       usersRef.child($0.uniqueIdentifier.uuidString).setValue($0.json)
     }
   }
-
 }
