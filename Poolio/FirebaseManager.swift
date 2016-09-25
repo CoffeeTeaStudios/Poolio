@@ -29,11 +29,22 @@ extension FirebaseManager {
     let pools = Pool.samplePools1
     gamble.pools = pools
     
-    let tokens: [[Token]] = pools.map { $0.tokens }.flatMap { $0 }
+    let tokens: [Token] = pools.map { $0.tokens }.flatMap { $0 }
+    
     storageRef.child("gambles").child(gamble.uniqueIdentifier.uuidString).setValue(gamble.json)
     
     pools.forEach {
       storageRef.child("pools").child($0.uniqueIdentifier.uuidString).setValue($0.json)
+    }
+    
+    tokens.forEach {
+      storageRef.child("tokens").child($0.uniqueIdentifier.uuidString).setValue($0.json)
+    }
+    
+    let users: [User] = tokens.map { $0.user }
+    
+    users.forEach {
+      storageRef.child("users").child($0.uniqueIdentifier.uuidString).setValue($0.json)
     }
   }
 }

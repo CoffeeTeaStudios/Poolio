@@ -20,6 +20,15 @@ extension Token {
   }
 }
 
+// MARK: - JSONConvertible
+extension Token: JSONConvertible {
+  var json: [String: Any] {
+    return [
+      "uniqueIdentifier": uniqueIdentifier.uuidString,
+      "user": user.uniqueIdentifier.uuidString
+    ]
+  }
+}
 extension Token: Equatable {}
 
 func ==(lhs: Token, rhs: Token) -> Bool {
