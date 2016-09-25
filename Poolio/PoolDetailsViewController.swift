@@ -17,11 +17,15 @@ final class PoolDetailsViewController: UIViewController {
     chanceImageView.image = UIImage.imageWith(color: UIColor(red: 255/255, green: 79/255, blue: 76/255, alpha: 1))
   }}
   
+  @IBOutlet fileprivate var teamName: UILabel!
+  
   var teamImage: UIImage?
+  var teamNameString: String?
   
   override func viewDidLoad() {
     super.viewDidLoad()
     teamImageView.image = teamImage
+    teamName.text = teamNameString
   }
 }
 

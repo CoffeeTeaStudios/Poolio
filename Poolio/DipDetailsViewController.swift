@@ -25,6 +25,21 @@ final class DipDetailsViewController: UIViewController {
     #imageLiteral(resourceName: "Team Whales"),
     #imageLiteral(resourceName: "The Eye"),
   ]
+  
+  var poolNames: [String] = [
+    "1+",
+    "Canucks Fans",
+    "Catterton",
+    "Classy Glasses",
+    "Hey Dawg",
+    "Lady Devs",
+    "Make a Wish",
+    "Much Moose",
+    "Sketchy",
+    "Team Smiley",
+    "Team Whales",
+    "The Eye",
+  ]
 }
 
 
@@ -33,6 +48,7 @@ extension DipDetailsViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: PoolCell.reuseIdentifier) as? PoolCell else { fatalError() }
     cell.poolImageView.image = poolImages[indexPath.row]
+    cell.nameLabel.text = poolNames[indexPath.row]
     return cell
   }
   
@@ -45,7 +61,7 @@ extension DipDetailsViewController: UITableViewDataSource {
 extension DipDetailsViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
-    performSegue(withIdentifier: .poolDetail, sender: poolImages[indexPath.row])
+    performSegue(withIdentifier: .poolDetail, sender: indexPath.row)
   }
 }
 
@@ -72,7 +88,9 @@ extension DipDetailsViewController: SegueHandlerType {
       break
     case .poolDetail:
       guard let detailVC = segue.destination as? PoolDetailsViewController else { fatalError() }
-      detailVC.teamImage = sender as? UIImage
+      let row = sender as! Int
+      detailVC.teamImage = poolImages[row]
+      detailVC.teamNameString = poolNames[row]
     }
   }
 }

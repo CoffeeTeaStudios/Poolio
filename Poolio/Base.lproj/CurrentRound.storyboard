@@ -470,6 +470,7 @@
                     <connections>
                         <outlet property="chanceImageView" destination="cX6-fu-SLr" id="K7L-fj-7Kv"/>
                         <outlet property="teamImageView" destination="6Bi-IX-eRk" id="shc-Gw-nLQ"/>
+                        <outlet property="teamName" destination="Grm-on-soi" id="pJX-kZ-PVy"/>
                         <segue destination="kHv-Fi-a3g" kind="show" identifier="groupContribution" id="zEQ-pL-pKu"/>
                     </connections>
                 </viewController>
