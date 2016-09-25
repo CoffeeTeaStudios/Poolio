@@ -101,7 +101,7 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="bXH-HY-B1O">
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT CONTRIBUTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nn4-5O-g6A">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nn4-5O-g6A">
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -115,7 +115,7 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="d5b-2G-jJ8">
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR ENTRY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnq-Cd-rCK">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY ENTRY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnq-Cd-rCK">
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -148,6 +148,11 @@
                     <navigationItem key="navigationItem" id="Ovf-cs-PQh"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="currentTokensLabel" destination="3rK-bD-aZc" id="gGs-hL-wlh"/>
+                        <outlet property="entryLabel" destination="iZY-LV-EGP" id="3tT-3m-xOH"/>
+                        <outlet property="maximumTokensLabel" destination="a6d-t3-tr2" id="7Vd-EB-GCd"/>
+                        <outlet property="nextRoundLabel" destination="i5g-do-kXc" id="3CK-tF-Un0"/>
+                        <outlet property="payoutLabel" destination="eNy-uQ-rSz" id="hio-4W-zfZ"/>
                         <outlet property="progressBarConstraint" destination="g3X-wI-0iT" id="vn2-od-Em5"/>
                         <outlet property="progressView" destination="yfa-LP-9RA" id="Q7S-F9-KDx"/>
                         <segue destination="WVv-BF-gpJ" kind="show" identifier="dipDetails" id="aGN-rD-BLw"/>
@@ -295,7 +300,7 @@
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="93Q-ox-BBt"/>
                         <view key="titleView" contentMode="scaleToFill" id="lYd-IH-sSD">
-                            <rect key="frame" x="112.5" y="5.5" width="150" height="33"/>
+                            <rect key="frame" x="113" y="6" width="150" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4MA-gt-ZZJ">

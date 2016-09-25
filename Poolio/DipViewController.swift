@@ -11,12 +11,59 @@ import UIKit
 final class DipViewController: UIViewController {
   @IBOutlet fileprivate var progressView: UIView!
   @IBOutlet fileprivate var progressBarConstraint: NSLayoutConstraint!
+  @IBOutlet fileprivate var payoutLabel: UILabel!
+  @IBOutlet fileprivate var nextRoundLabel: UILabel!
+  @IBOutlet fileprivate var maximumTokensLabel: UILabel!
+  @IBOutlet fileprivate var currentTokensLabel: UILabel!
+  
+  @IBOutlet fileprivate var entryLabel: UILabel!
+  
+  fileprivate let firebaseManager = FirebaseManager.sharedInstance
+  
+  fileprivate var gamble: Gamble! { didSet {
+    updateUI()
+  }}
+  
+  func updateUI() {
+    print("updating UI")
+    maximumTokensLabel.text = "D \(gamble.maximumTokens + 300000)"
+    
+    var tokens = 300000
+    for pool in gamble.pools {
+      tokens += pool.tokens.count
+    }
+    currentTokensLabel.text = "D \(tokens)"
+    
+    setProgressBar(toPercentage: 100 * CGFloat(tokens) / CGFloat(gamble.maximumTokens))
+  }
+  
+  deinit {
+    NotificationCenter.default.removeObserver(self)
+  }
+
 }
 
 // MARK: - Life Cycle Methods
 extension DipViewController {
   override var preferredStatusBarStyle: UIStatusBarStyle {
     return .lightContent
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+//    firebaseManager.installPot()
+    
+    firebaseManager.observeRoot(forObject: .gamble) { updates in
+      guard case let .gamble(gamble) = updates else { fatalError() }
+      self.gamble = gamble
+    }
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(DipViewController.received), name: NSNotification.Name(rawValue: "contribution"), object: nil)
+  }
+
+  func received() {
+    setProgressBar(toPercentage: 50)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -29,8 +76,8 @@ extension DipViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-    setProgressBar(toPercentage: 70)
   }
+  
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
     

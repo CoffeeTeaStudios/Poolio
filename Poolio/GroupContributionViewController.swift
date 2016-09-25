@@ -17,6 +17,7 @@ final class GroupContributionViewController: UIViewController {
     contributionTextField.becomeFirstResponder()
   }}
 }
+
 // MARK: - Life Cycle Methods
 extension GroupContributionViewController {
   override func viewDidLoad() {
@@ -34,6 +35,9 @@ extension GroupContributionViewController {
 // MARK: - @IBActions
 private extension GroupContributionViewController {
   @IBAction func requestButtonTapped() {
+    let contribution = Int(contributionTextField.text!)
+    
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "contribution"), object: self, userInfo: ["contribution": contribution])
     _ = navigationController?.popToRootViewController(animated: true)
   }
   
